@@ -62,7 +62,7 @@ public final class HttpServer {
                                     String errorMessage = "HTTP/1.1 500 error\r\n" +
                                             "Content-Type: text/html\r\n" +
                                             "Content-Type: text/html;charset="+Config.Encoding.ENCODE+"\r\n" +
-                                            "\r\n<h1>server error</h1>";
+                                            "\r\n<h1>server error<br/>"+e.getMessage()+"</h1>";
                                     output.write(errorMessage.getBytes());
                                 }
 
