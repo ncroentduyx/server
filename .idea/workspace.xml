@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da07a8a0-29fc-4ae8-8dc1-5ff37550fe8e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/server/LoginController.class" afterPath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/server/LoginController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/server/Request.class" afterPath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/server/Request.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/TomcatUtils.class" afterPath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/TomcatUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java" afterPath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Request.java" afterPath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/TomcatUtils.java" afterPath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/TomcatUtils.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/server/server.properties" afterPath="$PROJECT_DIR$/out/production/TomcatDemo/com/haodai/vip/tomcat/server/server.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/server.properties" afterPath="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/server.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -33,52 +29,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Servlet.java">
+      <file leaf-file-name="IOUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+              <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/ClientUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HttpServer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/HttpServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Request.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Request.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1699#1700#0" expanded="true" />
-                <element signature="e#1741#1742#0" expanded="true" />
-                <element signature="e#1783#1784#0" expanded="true" />
-                <element signature="e#1824#1825#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#1882#1883#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -87,51 +43,20 @@
         <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/server.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java">
+      <file leaf-file-name="Request.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6081081">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/LogUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.44144145">
+              <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
               <folding>
-                <element signature="e#144#145#0" expanded="true" />
-                <element signature="e#183#184#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IOUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TomcatUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/TomcatUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -176,10 +101,10 @@
         <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Response.java" />
         <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/HttpServer.java" />
         <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/TomcatUtils.java" />
-        <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java" />
+        <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java" />
         <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/server.properties" />
         <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Request.java" />
-        <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java" />
       </list>
     </option>
   </component>
@@ -618,12 +543,12 @@
       <updated>1495591054567</updated>
       <workItem from="1495591063313" duration="5804000" />
       <workItem from="1495850254893" duration="13296000" />
-      <workItem from="1495869376141" duration="2715000" />
+      <workItem from="1495869376141" duration="3436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21815000" />
+    <option name="totallyTimeSpent" value="22536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -656,7 +581,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -696,8 +621,20 @@
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java</url>
+          <line>17</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="39" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -824,33 +761,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Servlet.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/HttpServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding />
+        <state vertical-scroll-proportion="0.3581081">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/ClientUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.2027027">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/TomcatUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.10135135">
+          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30405405">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/LogUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.2027027">
           <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
           <folding>
             <element signature="e#144#145#0" expanded="true" />
@@ -862,7 +809,7 @@
     <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/utils/IOUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
+          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -870,42 +817,26 @@
     <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/server.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="16" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/HttpServer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/TomcatUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.067567565">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.44144145">
+          <caret line="42" column="31" selection-start-line="42" selection-start-column="31" selection-end-line="42" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1699#1700#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#1783#1784#0" expanded="true" />
-            <element signature="e#1824#1825#0" expanded="true" />
-            <element signature="e#1855#1856#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/haodai/vip/tomcat/server/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6081081">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>

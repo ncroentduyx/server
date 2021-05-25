@@ -41,16 +41,20 @@ public class Request {
     }
 
     private void parseParam() {
-        if (path.contains("?")){
-            String[] pathSplit = path.split("\\?");
-            path = pathSplit[0];
-            String endString = pathSplit[1];
-            String[] params = endString.split("&");
-            for (int i = 0; i < params.length; i++) {
-                String paramString = params[i];
-                String[] param = paramString.split("=");
-                paramMap.put(param[0], param[1]);
+        if (method.equalsIgnoreCase(Config.Method.GET)){
+            if (path.contains("?")){
+                String[] pathSplit = path.split("\\?");
+                path = pathSplit[0];
+                String endString = pathSplit[1];
+                String[] params = endString.split("&");
+                for (int i = 0; i < params.length; i++) {
+                    String paramString = params[i];
+                    String[] param = paramString.split("=");
+                    paramMap.put(param[0], param[1]);
+                }
             }
+        } else {
+
         }
     }
 
