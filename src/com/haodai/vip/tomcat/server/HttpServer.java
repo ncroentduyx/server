@@ -1,5 +1,7 @@
 package com.haodai.vip.tomcat.server;
 
+import com.haodai.vip.tomcat.utils.LogUtils;
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -47,46 +49,55 @@ public final class HttpServer {
                     Response response = new Response(output);
 
                     String requestPath = request.getPath();
-                    if (requestPath.endsWith(Config.Controller.SUFFIX)){
-                        for (Map.Entry<String, Servlet> entry : servletMap.entrySet()){
-                            if (requestPath.equals("/"+entry.getKey())){
-                                Servlet controller = entry.getValue();
-                                try {
-                                    if (Config.Method.GET.equalsIgnoreCase(request.getMethod())){
-                                        controller.get(request, response);
-                                    } else {
-                                        controller.post(request, response);
-                                    }
-                                    response.out();
-                                } catch (Exception e){
-                                    String errorMessage = "HTTP/1.1 500 error\r\n" +
-                                            "Content-Type: text/html\r\n" +
-                                            "Content-Type: text/html;charset="+Config.Encoding.ENCODE+"\r\n" +
-                                            "\r\n<h1>server error<br/>"+e.getMessage()+"</h1>";
-                                    output.write(errorMessage.getBytes());
-                                }
-
-                                isHandlerRequest = true;
-                            }
-                        }
+                    if (requestPath == null){
+                        String errorMessage = "HTTP/1.1 500 error\r\n" +
+                                "Content-Type: text/html\r\n" +
+                                "Content-Type: text/html;charset="+Config.Encoding.ENCODE+"\r\n" +
+                                "\r\n<h1>server error<br/>没有获取到传递来的内容</h1>";
+                        output.write(errorMessage.getBytes());
+                        isHandlerRequest = true;
                     } else {
-                        FileInputStream fis = null;
-                        try {
-                            File file = new File(System.getProperty("user.dir")+File.separator+Config.Server.WEB_ROOT, requestPath);
-                            byte[] buffer = new byte[1024];
-                            if (file.exists()) {
-                                fis = new FileInputStream(file);
-                                int len = fis.read(buffer, 0, Config.IO.BUFFER_SIZE);
-                                while (len!=-1) {
-                                    output.write(buffer, 0, len);
-                                    len = fis.read(buffer, 0, Config.IO.BUFFER_SIZE);
+                        if (requestPath.endsWith(Config.Controller.SUFFIX)){
+                            for (Map.Entry<String, Servlet> entry : servletMap.entrySet()){
+                                if (requestPath.equals("/"+entry.getKey())){
+                                    Servlet controller = entry.getValue();
+                                    try {
+                                        if (Config.Method.GET.equalsIgnoreCase(request.getMethod())){
+                                            controller.get(request, response);
+                                        } else {
+                                            controller.post(request, response);
+                                        }
+                                        response.out();
+                                    } catch (Exception e){
+                                        String errorMessage = "HTTP/1.1 500 error\r\n" +
+                                                "Content-Type: text/html\r\n" +
+                                                "Content-Type: text/html;charset="+Config.Encoding.ENCODE+"\r\n" +
+                                                "\r\n<h1>server error<br/>"+e.getMessage()+"</h1>";
+                                        output.write(errorMessage.getBytes());
+                                    }
+
+                                    isHandlerRequest = true;
                                 }
-                                output.write("静态请求已经处理".getBytes());
-                                isHandlerRequest = true;
                             }
-                        } finally {
-                            if (fis != null){
-                                fis.close();
+                        } else {
+                            FileInputStream fis = null;
+                            try {
+                                File file = new File(System.getProperty("user.dir")+File.separator+Config.Server.WEB_ROOT, requestPath);
+                                byte[] buffer = new byte[1024];
+                                if (file.exists()) {
+                                    fis = new FileInputStream(file);
+                                    int len = fis.read(buffer, 0, Config.IO.BUFFER_SIZE);
+                                    while (len!=-1) {
+                                        output.write(buffer, 0, len);
+                                        len = fis.read(buffer, 0, Config.IO.BUFFER_SIZE);
+                                    }
+                                    output.write("静态请求已经处理".getBytes());
+                                    isHandlerRequest = true;
+                                }
+                            } finally {
+                                if (fis != null){
+                                    fis.close();
+                                }
                             }
                         }
                     }

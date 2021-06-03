@@ -1,37 +1,24 @@
 package com.haodai.vip.tomcat.utils;
 
 
+import com.haodai.vip.tomcat.server.Config;
+
 import java.io.*;
 
 /**
  * Created by huangtao on 17/5/24.
  */
 public class IOUtils {
-    public static String LINE_SEPARATOR=  System.getProperty("line.separator");
-
     public static String inputStream2String(InputStream inputStream){
-        StringBuilder sb = new StringBuilder();
+        String requestString = null;
         try {
-
-
-//            byte[] bytes = new byte[2048];
-//            inputStream.read(bytes);
-//            String s = new String(bytes);
-
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
-            String readContent;
-            while ((readContent = bufferedReader.readLine()) != null) {
-//                LogUtils.info(readContent+"==>");
-                sb.append(readContent+"\n");
-                if (readContent.length() == 0){
-                    break;
-                }
-            }
+            byte[] buffer = new byte[1024*100];
+            int len = inputStream.read(buffer);
+            requestString = new String(buffer, 0, len, Config.Encoding.ENCODE);
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        return sb.toString();
+        return requestString;
     }
 
 }

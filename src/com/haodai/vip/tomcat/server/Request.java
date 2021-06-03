@@ -1,8 +1,8 @@
 package com.haodai.vip.tomcat.server;
 
 import com.haodai.vip.tomcat.utils.IOUtils;
+import com.haodai.vip.tomcat.utils.LogUtils;
 
-import javax.lang.model.element.Name;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,38 +23,51 @@ public class Request {
 
     public void parse(InputStream inputStream) {
         String requestString = IOUtils.inputStream2String(inputStream);
-        String[] requestArray = requestString.split(IOUtils.LINE_SEPARATOR);
+        String[] requestArray = requestString.split("\\r\\n");
 
         for (int i = 0; i < requestArray.length; i++) {
+            String lineString = requestArray[i];
             if (i == 0){
-                String line = requestArray[i];
+                String line = lineString;
                 String[] lineArray = line.split(" ");
                 method = lineArray[0];
                 path = lineArray[1];
-                parseParam();
+                if (Config.Method.GET.equalsIgnoreCase(method)){
+                    parseGetParam();
+                }
             } else {
-                String[] line = requestArray[i].split(":");
-                headerMap.put(line[0].trim(), line[1].trim());
-            }
-        }
-
-    }
-
-    private void parseParam() {
-        if (method.equalsIgnoreCase(Config.Method.GET)){
-            if (path.contains("?")){
-                String[] pathSplit = path.split("\\?");
-                path = pathSplit[0];
-                String endString = pathSplit[1];
-                String[] params = endString.split("&");
-                for (int i = 0; i < params.length; i++) {
-                    String paramString = params[i];
-                    String[] param = paramString.split("=");
-                    paramMap.put(param[0], param[1]);
+                if (lineString.contains(":")){
+                    String[] line = lineString.split(":");
+                    headerMap.put(line[0].trim(), line[1].trim());
+                } else {
+                    if (!"".equals(lineString)){
+                        parsePostParam(lineString);
+                    }
                 }
             }
-        } else {
+        }
+    }
 
+    private void parseGetParam() {
+        if (path.contains("?")){
+            String[] pathSplit = path.split("\\?");
+            path = pathSplit[0];
+            String endString = pathSplit[1];
+            String[] params = endString.split("&");
+            for (int i = 0; i < params.length; i++) {
+                String paramString = params[i];
+                String[] param = paramString.split("=");
+                paramMap.put(param[0], param[1]);
+            }
+        }
+    }
+
+    private void parsePostParam(String posParamString) {
+        String[] posParamsString = posParamString.split("&");
+        for (int i = 0; i < posParamsString.length; i++) {
+            String pos = posParamsString[i];
+            String[] posParam = pos.split("=");
+            paramMap.put(posParam[0], posParam[1]);
         }
     }
 
