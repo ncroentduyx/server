@@ -15,7 +15,7 @@ public class IOUtils {
             byte[] buffer = new byte[1024*100];
             int len = inputStream.read(buffer);
             requestString = new String(buffer, 0, len, Config.Encoding.ENCODE);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return requestString;

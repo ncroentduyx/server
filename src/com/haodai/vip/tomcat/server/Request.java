@@ -4,7 +4,9 @@ import com.haodai.vip.tomcat.utils.IOUtils;
 import com.haodai.vip.tomcat.utils.LogUtils;
 
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -23,6 +25,9 @@ public class Request {
 
     public void parse(InputStream inputStream) {
         String requestString = IOUtils.inputStream2String(inputStream);
+        if (requestString == null){
+            return;
+        }
         String[] requestArray = requestString.split("\\r\\n");
 
         for (int i = 0; i < requestArray.length; i++) {
@@ -85,5 +90,21 @@ public class Request {
 
     public String getMethod() {
         return method;
+    }
+
+    public List<String> getHeaderNames(){
+        List<String> nameList = new ArrayList<>();
+        for (Map.Entry<String, String> entry : headerMap.entrySet()){
+            nameList.add(entry.getKey());
+        }
+        return nameList;
+    }
+
+    public List<String> getParamsNames(){
+        List<String> nameList = new ArrayList<>();
+        for (Map.Entry<String, String> entry : paramMap.entrySet()){
+            nameList.add(entry.getKey());
+        }
+        return nameList;
     }
 }
