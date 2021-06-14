@@ -19,6 +19,9 @@ public class Request {
     private Map<String, String> headerMap = new HashMap<>();
     private Map<String, String> paramMap = new HashMap<>();
 
+
+    private String fileSplitLine;
+
     public Request(InputStream input) {
         parse(input);
     }
@@ -43,7 +46,18 @@ public class Request {
             } else {
                 if (lineString.contains(":")){
                     String[] line = lineString.split(":");
-                    headerMap.put(line[0].trim(), line[1].trim());
+                    String name = line[0].trim();
+                    String value = line[1].trim();
+
+                    if (Config.RequestInfo.CONTENT_TYPE.equalsIgnoreCase(name)){
+                        if (value.contains(";")){
+                            String[] contentTypeArray = value.split(";");
+                            fileSplitLine = contentTypeArray[1];
+                            value = contentTypeArray[0];
+                            fileSplitLine = fileSplitLine.substring(fileSplitLine.indexOf(Config.RequestInfo.BOUNDARY)+Config.RequestInfo.BOUNDARY.length()+1);
+                        }
+                    }
+                    headerMap.put(name, value);
                 } else {
                     if (!"".equals(lineString)){
                         parsePostParam(lineString);
@@ -106,5 +120,17 @@ public class Request {
             nameList.add(entry.getKey());
         }
         return nameList;
+    }
+
+    public String getContentType(){
+        String contentType = headerMap.get(Config.RequestInfo.CONTENT_TYPE);
+        if (contentType == null){
+            return Config.RequestInfo.CONTENT_TYPE_NO_FILE;
+        }
+        return contentType;
+    }
+
+    public String getFileSplitLine() {
+        return fileSplitLine;
     }
 }

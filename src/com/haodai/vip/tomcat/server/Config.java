@@ -7,6 +7,16 @@ import java.io.File;
  */
 public class Config {
 
+    public class RequestInfo{
+        public static final String CONTENT_TYPE = "Content-Type";
+
+        public static final String CONTENT_TYPE_NO_FILE = "application/x-www-form-urlencoded";
+        public static final String BOUNDARY = "boundary";
+
+
+
+    }
+
     public class Server{
         public static final String CONFIG_PATH = "server.properties";
 
